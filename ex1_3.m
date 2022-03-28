@@ -17,7 +17,7 @@ uh1(:,1) = [0.0 1.0]'; % 赋予初始值
 uh2(:,1) = [0.0 1.0]'; % 赋予初始值
 
 A = [0 1;-1 0];      % 方程的常系数矩阵
-B = inv(eye(2)-0.5*dt*A); % Mid Point Rule 需要的逆矩阵
+B = inv(eye(2)-0.5*dt*A); % Trapezoid Rule 需要的逆矩阵
 
 % 下面是主要的计算部分，我们用 while loop 进行时间推进
 tc = dt;    % 现在的时间 time at current time（现在是dt，因为0时刻已经过去了）
@@ -62,6 +62,6 @@ title("改进的Euler法： v")
 % 计算并显示误差
 format longE
 disp(["向前Euler法误差：", num2str([abs(sin(1)-uh1(1,end)),abs(cos(1)-uh1(2,end))])])
-disp(["改进的Euler法(mid point rule)误差：", num2str([abs(sin(1)-uh2(1,end)),abs(cos(1)-uh2(2,end))])])
+disp(["改进的Euler法(Trapezoid rule)误差：", num2str([abs(sin(1)-uh2(1,end)),abs(cos(1)-uh2(2,end))])])
 
 
