@@ -41,7 +41,7 @@ subplot(1,2,2)
 plot(xh,uh2,'-o')
 hold on
 plot(0:1e-4:T,exp(-5*(0:1e-4:T)),'g-')
-title("改进的Euler格式（Mid Point Rule）")
+title("改进的Euler格式（Trapezoid Rule）")
 
 % 计算并显示误差
 format longE
