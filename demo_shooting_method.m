@@ -51,8 +51,8 @@ while (err_flag >= 1e-13)   %解ODEs： 一个是原微分方程y，一个是导
             break    
         end
         
-        tc  = tc  + dt;  % 时间更新   + dt
-        itc = itc +  1;  % index更新  + 1
+        tc  = tc  + dt;  % 时间更新   + dt 注意：这样更新tc（大数+小数），可能会导致巨大的舍入误差累积
+        itc = itc +  1;  % index更新  + 1 注意：可以用更精准的 tc = itc*dt代替
         
     end
     
