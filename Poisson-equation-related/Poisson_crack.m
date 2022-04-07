@@ -1,13 +1,10 @@
 %*********************************************************************%
 %| This demo is to use the 5 points central finite difference scheme  %
-%| for the Poisson equation with cracks                               %
-%| 本程序用5点中心差分格式求解 crack boundary条件下的 Poisson 方程         %
+%| for the Poisson equation with cracks. 注意收敛阶！！！                %
+%| 本程序用5点中心差分格式求解 crack boundary条件下的 Poisson 方程          %
 %| - \Delta u = f(x,y),      for x \in \Omega=[-1,1]x[0,1]            %
-%| \partial u/partial n = 0, for x on boundary                        %
-%|                                                                    %
-%| 我们使用加一个penalty term 的方式把数值解固定，                         %
-%|  - \Delta u + \lambda = f(x,y), 这里的 \lambda 是常数                %
-%|  u在区域[0,1]x[0,1]上的积分值取0.                                     %
+%| \partial u/partial n = 0, for x on right half of bottom boundary   %
+%| u = 0 on other parts of the boundary. f(x,y)=1 is used.            %
 %|********************************************************************%
 %| 该程序可以以及欢迎随意使用，更改，借鉴，分发，无需考虑版权等。              %
 %| 如果你发现错误，或者你有更好的方法请联系 高华东 huadong@hust.edu.cn       %
