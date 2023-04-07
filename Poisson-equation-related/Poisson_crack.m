@@ -36,6 +36,7 @@ for kkk = 1:4
     % 修正 bottom 边上的矩阵系数 Neumann B.C. 只需对横向节点系数 x 0.5
     for k = 1:length(ibd_N)
         A(ibd_N(k),(ibd_N(k)-1):(ibd_N(k)+1)) = A(ibd_N(k),(ibd_N(k)-1):(ibd_N(k)+1))/2;
+        F(ibd_N(k))=F(ibd_N(k))/2;
     end
     
     % 修正 corner 处的矩阵系数 plus 右端项 Dirichlet B.C.
